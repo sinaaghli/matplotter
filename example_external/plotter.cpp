@@ -2,7 +2,6 @@
 #include <matplotter/matplotter.h>
 
 int main(int argc, char *argv[]) {
-
   // start a plot
   matplotter::PlotStart("this is a simple plot");
 
@@ -15,6 +14,7 @@ int main(int argc, char *argv[]) {
   for (int ii = 0; ii < 100; ii++) {
     data1d.push_back(ii);
   }
+
   // start a plot
   matplotter::PlotStart("this is a 1D plot");
   // plot one dimentional data in red

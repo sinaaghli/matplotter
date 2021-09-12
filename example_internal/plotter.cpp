@@ -1,8 +1,8 @@
-#include "matplotter/matplotter.h"
 #include <cmath>
 
-int main(int argc, char *argv[]) {
+#include "matplotter/matplotter.h"
 
+int main(int argc, char *argv[]) {
   // start a plot
   matplotter::PlotStart("this is a simple plot");
 

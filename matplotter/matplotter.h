@@ -8,12 +8,12 @@
 #include "matplotlibcpp.h"
 
 // error print formatting
-#define ERROREXIT(X)                                                           \
-  std::cerr << "Error in file:" << __FILE__ << " Line:" << __LINE__ << " "     \
-            << X << std::endl;                                                 \
+#define ERROREXIT(X)                                                       \
+  std::cerr << "Error in file:" << __FILE__ << " Line:" << __LINE__ << " " \
+            << X << std::endl;                                             \
   std::exit(EXIT_FAILURE)
-#define ERROR(X)                                                               \
-  std::cerr << "Error in file:" << __FILE__ << " Line:" << __LINE__ << " "     \
+#define ERROR(X)                                                           \
+  std::cerr << "Error in file:" << __FILE__ << " Line:" << __LINE__ << " " \
             << X << std::endl
 
 namespace matplotter {
@@ -70,7 +70,6 @@ inline double TickTock_s(Timestamp tick_time, Timestamp tock_time) {
 
 inline void PlotY(std::vector<double> &y_axis, std::string style = "r-",
                   std::string ylabel = "") {
-
   // Plot line from given x and y data. Color is selected automatically.
   if (ylabel.empty()) {
     matplotlibcpp::plot(y_axis, style);
@@ -82,7 +81,6 @@ inline void PlotY(std::vector<double> &y_axis, std::string style = "r-",
 
 inline void PlotXY(std::vector<double> &x_axis, std::vector<double> &y_axis,
                    std::string style = "r-", std::string ylabel = "") {
-
   // Plot line from given x and y data. Color is selected automatically.
   if (ylabel.empty()) {
     matplotlibcpp::plot(x_axis, y_axis, style);
@@ -93,7 +91,6 @@ inline void PlotXY(std::vector<double> &x_axis, std::vector<double> &y_axis,
 }
 
 inline void PlotStart(std::string title) {
-
   // Set the size of output image to 1200x780 pixels
   matplotlibcpp::figure_size(1200, 780);
   // Add graph title
@@ -101,21 +98,18 @@ inline void PlotStart(std::string title) {
 }
 
 inline void PlotShow() {
-
   // Enable legend and show
   matplotlibcpp::legend();
   matplotlibcpp::show();
 }
 
 inline void PlotSave(std::string filename) {
-
   // Save the image (file format is determined by the extension) ex.
   // "./basic.png"
   matplotlibcpp::save(filename);
 }
 
 inline void PlotTest() {
-
   // Prepare data.
   int n = 5000;
   std::vector<double> x(n), y(n), z(n), w(n, 2);
@@ -137,5 +131,5 @@ inline void PlotTest() {
   matplotlibcpp::xlim(0, 1000 * 1000);
 }
 
-} // namespace matplotter
-#endif // MATPLOTTER_H__
+}  // namespace matplotter
+#endif  // MATPLOTTER_H__
