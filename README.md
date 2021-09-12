@@ -1,2 +1,4 @@
-# matplotter
-cpp interface for matplotlib
+matplotter
+=====================
+
+cpp wrapper for matplot lib
